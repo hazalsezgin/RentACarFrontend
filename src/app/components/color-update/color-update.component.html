@@ -1,0 +1,25 @@
+<div class="content m-4" style="border-radius: 18px; color: darkgreen; border-color: darkolivegreen;">
+    <div class="col-md-12">
+        <div class="card">
+
+            <div class="card-header">
+                <h5 class="title">Rengi Güncelle</h5>
+            </div>
+
+            <div class="card-body">
+
+                <form [formGroup]="colorUpdateForm">
+                    <div class="mb-3">
+                        <label for="colorNameInput" class="form-label">Renk</label>
+                        <input type="text" class="form-control" id="colorNameInput" formControlName="name" />
+                    </div>
+                </form>
+
+                <button class="btn btn-outline-success float-end" type="button" (click)="updateColor()">
+                    Güncelle
+                </button>
+            </div>
+            
+        </div>
+    </div>
+</div>

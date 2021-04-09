@@ -1,0 +1,109 @@
+<main class="m-2">
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      </div>
+
+      <div class="carousel-inner">
+
+        <div class="carousel-item active">
+          
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+          <img class="bd-placeholder-img " 
+          width="250" height="250" 
+          src="https://localhost:44324//uploads/az.jpg"
+          role="img">
+          <div class="container">
+            <div class="carousel-caption text-start">
+              <h1 style="font-size:60px;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              color: rgb(255, 255, 255);">Hemen Kirala Sürmeye Başla</h1>
+              <p><a class="btn btn-warning btn-lg" routerLink="/login">Acele Et!</a></p>
+            </div>
+          </div>
+        </div>
+
+        
+        <div class="carousel-item">
+          <img class="bd-placeholder-img " 
+          width="250" height="250" 
+          src="https://localhost:44324//uploads/homepage.jpg"
+          role="img">
+          <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false"><rect width="100%" height="100%" fill="#777"/></svg>
+
+          <div class="container">
+            <div class="carousel-caption">
+              <h1 style="font-size:80px;
+              font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+              color: rgb(212, 173, 230);">Arabalar</h1>
+              <p><a class="btn btn-warning btn-lg"routerLink="/cars">Tüm Arabalar</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  
+    <div class="container marketing">
+  
+      <div class="row">
+
+        <div style="text-align:center" class="col-lg-4">
+          <img class="bd-placeholder-img rounded" 
+          width="250" height="250" 
+          src="https://localhost:44324//uploads/homepagejeep.png"
+          role="img">
+          <p><a class="btn btn-warning btn-lg" routerLink="/cars/brand/4">Jeep</a></p>
+
+        </div>
+
+        <div style="text-align:center" class="col-lg-4">
+          <img class="bd-placeholder-img rounded" 
+          width="250" height="250" 
+          src="https://localhost:44324//uploads/a1.jpg"
+          role="img">
+          <p><a class="btn btn-warning btn-lg"routerLink="/cars/brand/6">Chevrolet</a></p>
+        </div>
+
+        <div style="text-align:center" class="col-lg-4">
+          <img class="bd-placeholder-img rounded" 
+          width="250" height="250" 
+          src="https://localhost:44324//uploads/bmw.jpg"
+          role="img">
+          <p><a class="btn btn-warning btn-lg"routerLink="/cars/brand/2">BMW</a></p>
+        </div>
+
+        
+
+        <div class="col-lg-4 col-md-6 col-sm-12 mb-3" *ngFor="let car of cars "  >
+          <div  class="card" style="width: 100%;">
+              <img  src="https://localhost:44324/{{car.imagePath}}" class="card-img-top" alt="Araba Resmi">
+              <div class="card-body">
+                <h5 class="card-title text-center">{{car.description | uppercase}}</h5>
+                <hr>
+                <p> <b>Marka :</b> {{car.brandName }} </p>
+                <hr>
+                <p> <b>Model Yılı :</b> {{car.modelYear}} </p>
+                <hr>
+                <p> <b class="pull-left">Günlük Fiyatı :</b> {{car.dailyPrice|currency: "TRY":""}} ₺</p>
+                <hr>
+                <p> <b>Renk :</b> {{car.colorName}} </p>
+                <hr>
+                <a routerLink="/cars/details/{{car.carId}}" class="btn btn-md btn-secondary btn-outline-white mt-2">Detay</a>
+              </div>
+            </div>
+          </div>
+      </div>
+  
+    </div>
+  </main>

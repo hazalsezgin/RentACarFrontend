@@ -1,0 +1,27 @@
+<!-- <li class="list-group-item list-group-item-primary">Renkler</li>
+<ul *ngFor="let color of colors" class="list-group">
+    <li (click)="setCurrentColor(color)" 
+    routerLink="/cars/color/{{color.colorId}}"
+    [class]="getCurrentColorClass(color)">{{color.colorName}}</li>    
+  </ul>
+  <h5 *ngIf="currentColor">{{currentColor.colorName}}</h5> -->
+
+  <!-- <div class="card">
+    <div class="card-header">Renkler</div>
+    <select (change)="setCurrentColor()" [(ngModel)]="currentColor" class="form-select">
+      <option [ngValue]="allColor" [selected]="allColorSelected()" class="option">Tüm Renkler</option>
+      <option *ngFor="let color of colors" [ngValue]="color" class="option">
+        {{ color.colorName }}
+      </option>
+    </select>
+  </div> -->
+
+  <li class="list-group-item list-group-item-primary">Renkler</li>
+<ul *ngFor="let color of colors" class="list-group">
+    <li (click)="setCurrentColor(color)" 
+    routerLink="/cars/color/{{color.colorId}}"
+    [class]="getCurrentColorClass(color)">{{color.colorName}}</li>
+    
+    
+  </ul>
+  <h5 *ngIf="currentColor">{{currentColor.colorName}}</h5>

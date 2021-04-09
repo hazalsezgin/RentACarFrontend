@@ -1,0 +1,60 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">CarRent</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse m-2" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="">Anasayfa</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="">Fırsatlar</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Opsiyonlar
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="cars">Tüm Arabalar</a></li>
+              <li><a class="dropdown-item" href="brands">Markalarımız</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="colors">Renkler</a></li>
+            </ul>
+          </li>
+          
+        </ul>
+        
+        <div class="mb-2" *ngIf="!isLogOK()">
+
+          <form class="d-flex">
+            <div class="d-flex btn-group ps-4" role="group" aria-label="Basic radio toggle button group">
+
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off">
+              <label class="btn btn-outline-info" for="btnradio1" routerLink="/login">Login</label>
+
+              <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+              <label class="btn btn-outline-success" for="btnradio2" routerLink="/register">Register</label>
+
+            </div>
+          </form>
+
+        </div>
+        <div class="mb-0" *ngIf="isLogOK()">
+          <ul class="navbar-nav me-auto ms-2 mb-lg-0">
+            
+          <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false"> 
+            {{getUser()}} İşlemler
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item " routerLink="/edit/user">Bilgileriniz</a></li>
+              <li><a class="dropdown-item" (click)="logout()" routerLink="">Çıkış Yap</a></li>
+          </ul>
+          </li>
+          </ul>
+            </div>
+      </div>
+    </div>
+  </nav>

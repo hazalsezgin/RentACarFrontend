@@ -1,0 +1,78 @@
+<!-- CARS -->
+<div *ngIf="!cars" class="alert alert-info w-100" role="alert">
+    Araba Yok
+  </div>
+  <div *ngIf="!brands" class="alert alert-info w-100" role="alert">
+    Marka Yok
+  </div>
+  <div *ngIf="!colors" class="alert alert-info w-100" role="alert">
+    Renk Yok
+  </div>
+  
+  <table *ngIf="cars" class="table m-4">
+    <thead>
+      <tr>
+        <th scope="col" style="background-color: rgb(174, 204, 214); border-radius: 10px">Id</th>
+        <th scope="col" style="background-color: rgb(174, 204, 214); border-radius: 10px">Marka</th>
+        <th scope="col" style="background-color: rgb(148, 199, 218); border-radius: 10px">Renk</th>
+        <th scope="col" style="background-color: rgb(146, 214, 236); border-radius: 10px">Model Yılı</th>
+        <th scope="col" style="background-color: rgb(116, 207, 238); border-radius: 10px">Günlük Ücreti</th>
+        <th scope="col" style="background-color: rgb(98, 217, 250); border-radius: 10px">Açıklama</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let car of cars" (click)="setCurrentCar(car)" 
+        [class]="getCarClass(car)">
+        <td>{{ car.carId}}</td>
+        <td>{{ car.brandId}}</td>
+        <td>{{ car.colorId}}</td>
+        <td>{{ car.modelYear }}</td>
+        <td>{{ car.dailyPrice }}</td>
+        <td>{{ car.description }}</td>
+        <td><button routerLink="/car/update/{{car.carId}}" type="button" class="btn btn-outline-success">Güncelle</button></td>
+        <td><button routerLink="/car/addimage/{{car.carId}}" type="button" class="btn btn-outline-success">Fotoğraf Ekle</button></td>
+        <td><button (click)="deleteCar(car)" type="button" class="btn btn-outline-danger">Sil</button></td>
+      </tr>
+      <tr scope="col"><button routerLink="/car/add" type="button" class="btn btn-outline-info m-2">Ekle</button></tr>
+    </tbody>
+  </table>
+  
+  <!-- BRANDS -->
+  
+  <table *ngIf="brands" class="table m-4">
+    <thead>
+      <tr>
+        <th scope="col" style="background-color: rgb(174, 204, 214); border-radius: 10px">Marka</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let brand of brands" (click)="setCurrentBrand(brand)"
+        [class]="getBrandClass(brand)">
+        <td>{{ brand.brandId }}</td>
+        <td>{{ brand.brandName }}</td>
+        <td><button routerLink="/brand/update/{{brand.brandId}}" type="button" class="btn btn-outline-success">Güncelle</button></td>
+        <td><button (click)="deleteBrand(brand)" type="button" class="btn btn-outline-danger">Sil</button></td>
+      </tr>
+      <tr scope="col"><button routerLink="/brand/add" type="button" class="btn btn-outline-info m-2">Ekle</button></tr>
+    </tbody>
+  </table>
+  
+  
+  <!-- COLORS -->
+  
+  <table *ngIf="colors" class="table m-4">
+    <thead>
+      <tr>
+        <th scope="col" style="background-color: rgb(132, 213, 240); border-radius: 10px">Renk</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let color of colors" (click)="setCurrentColor(color)" [class]="getColorClass(color)">
+        <td>{{ color.colorId }}</td>
+        <td>{{ color.colorName }}</td>
+        <td><button routerLink="/color/update/{{color.colorId}}" type="button" class="btn btn-outline-success">Güncelle</button></td>
+        <td><button (click)="deleteColor(color)" type="button" class="btn btn-outline-danger">Sil</button></td>
+      </tr>
+      <tr scope="col"><button routerLink="/color/add" type="button" class="btn btn-outline-info m-2">Ekle</button></tr>
+    </tbody>
+  </table>

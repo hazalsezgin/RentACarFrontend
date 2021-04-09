@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex, nofollow">
+
+   
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        window.alert = function(){};
+        var defaultCSS = document.getElementById('bootstrap-css');
+        function changeCSS(css){
+            if(css) $('head > link').filter(':first').replaceWith('<link rel="stylesheet" href="'+ css +'" type="text/css" />'); 
+            else $('head > link').filter(':first').replaceWith(defaultCSS); 
+        }
+        $( document ).ready(function() {
+          var iframe_height = parseInt($('html').height()); 
+          window.parent.postMessage( iframe_height, 'https://bootsnipp.com');
+        });
+    </script>
+</head>
+<body>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+ <div align="center"> <img  class="mb-4"  src= "https://localhost:44324//uploads/register.jpg" alt="" width="100" height="100"></div>
+	<h4 class="card-title mt-3 text-center">Kayıt Ol</h4>
+
+	<form [formGroup]="registerForm">
+	<div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input formControlName="firstName"
+        type="text"
+         class="form-control"
+          id="floatingInput"
+          placeholder="Ad">
+    </div> 
+    <div class="form-group input-group">
+		<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-user"></i> </span>
+		 </div>
+        <input formControlName="lastName"
+        type="text"
+         class="form-control"
+          id="floatingInput"
+          placeholder="Soyad">
+    </div> 
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input
+        formControlName="email"
+        type="email"
+         class="form-control"
+          id="floatingInput"
+          placeholder="Email">      
+    </div> 
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock"></i> </span>
+		</div>
+        <input formControlName="password"
+        type="password"
+         class="form-control"
+          id="floatingInput"
+          placeholder="Şifre">
+           
+    </div>                                     
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary btn-block" (click)="register()"> Kayıt Ol </button>
+    </div>      
+    <p class="text-center">Hesabın var mı? <a routerLink="/login">Giriş Yap</a> </p>                                                                 
+</form>
+</article>
+</div> 
+</div> 
+<br><br>
+	<script type="text/javascript"></script>
+</body>
+</html>
+
+<!-- <body class="text-center">
+    <main class="form-register">
+        <form [formGroup]="registerForm">
+            <h1 class="h3 mb-3 fw-normal">Kayıt Ol</h1>
+            <div class="form-floating p-1">
+                <input formControlName="firstName" type="text" class="form-control" id="floatingInputFirstName" placeholder="First Name">
+                <label for="floatingInput">Adınız</label>
+            </div>
+            <div class="form-floating p-1">
+                <input formControlName="lastName" type="text" class="form-control" id="floatingInputLastName" placeholder="Last Name">
+                <label for="floatingInput">Soyadınız</label>
+            </div>
+            
+            <div class="form-floating p-1">
+                <input formControlName="email" type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                <label for="floatingInput">Email adresiniz</label>
+            </div>
+            <div class="form-control p-1">
+                <input formControlName="password" type="password" class="form-control" id="floatingPassword" placeholder="Şifre" (keyup)="keyupPasswordEvent($event)">
+                <label for="floatingPassword">Şifre</label>
+                <div [style]="passwordSecurityKnobClass">
+                    <p-knob formControlName="passwordsecurity" [(ngModel)]="passwordSecurityKnobValue" valueColor="Black" rangeColor="Blue"></p-knob>
+                </div>
+
+            </div>
+            <div class="p-2">
+                <label>By signing up, you agree to our <br> <a routerLink="/#" class="bg-black">Terms & Privacy Policy.</a></label>
+            </div>
+            <button (click)="register()" class="w-100 btn btn-lg btn-primary" type="submit">Register</button>
+            <p class="mt-5 mb-3 text-muted">&copy; 2020–2021</p>
+        </form>
+    </main>
+</body> -->
