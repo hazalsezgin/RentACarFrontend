@@ -1,3 +1,11 @@
+# Photos
+![1](https://user-images.githubusercontent.com/77546910/114280402-aebb6300-9a41-11eb-8583-f66b14d1a171.png)
+![2](https://user-images.githubusercontent.com/77546910/114280403-afec9000-9a41-11eb-9053-742ead007347.png)
+![3](https://user-images.githubusercontent.com/77546910/114280404-b0852680-9a41-11eb-9b31-b22fa1a79951.png)
+![4](https://user-images.githubusercontent.com/77546910/114280405-b11dbd00-9a41-11eb-96a3-9c58f29ebe5f.png)
+![5](https://user-images.githubusercontent.com/77546910/114280407-b1b65380-9a41-11eb-8eb7-f3d45e0471da.png)
+![6](https://user-images.githubusercontent.com/77546910/114280408-b24eea00-9a41-11eb-8e8b-f6bec55f9956.png)
+
 # RentCar
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
