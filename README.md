@@ -1,3 +1,7 @@
+### Name: Hazal SEZGİN
+### LinkedIn: https://www.linkedin.com/in/hazal-sezgin-48a253170/
+### Gmail: hazalsezgin99@gmail.com
+
 # Photos
 ![1](https://user-images.githubusercontent.com/77546910/114280402-aebb6300-9a41-11eb-8583-f66b14d1a171.png)
 ![2](https://user-images.githubusercontent.com/77546910/114280403-afec9000-9a41-11eb-9053-742ead007347.png)
